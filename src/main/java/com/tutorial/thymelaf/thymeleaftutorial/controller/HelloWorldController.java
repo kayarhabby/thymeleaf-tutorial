@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class helloWorldController {
+public class HelloWorldController {
 
     // This is the controller class that will handle the requests and responses.
     // The @Controller annotation is used to define the class as a controller.
