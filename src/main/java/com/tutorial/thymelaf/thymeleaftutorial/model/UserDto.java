@@ -1,12 +1,12 @@
 package com.tutorial.thymelaf.thymeleaftutorial.model;
 
-public class User {
+public class UserDto {
     private String name;
     private String email;
     private String role;
     private String gender;
 
-    public User(String name, String email, String role, String gender) {
+    public UserDto(String name, String email, String role, String gender) {
         this.name = name;
         this.email = email;
         this.role = role;
