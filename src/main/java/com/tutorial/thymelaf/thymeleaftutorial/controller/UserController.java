@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 @Controller
 public class UserController {
 
@@ -59,5 +61,24 @@ public class UserController {
         @GetMapping("fragmentExpression")
         public String fragmentExpression(){
             return "fragmentExpression";
+        }
+
+        // handler method to handle iteration expressions request
+        // http:localhost:8080/users
+        @GetMapping("users")
+        public String users(Model model) {
+            UserDto user1 = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
+            UserDto user2 = new UserDto("Jane Doe", "Jane.doe@example.com", "User", "Female");
+            UserDto user3 = new UserDto("Tom Smith", "tom.smith@example.com", "User", "Male");
+
+            /*
+             * Création d'une liste immutable : La liste créée par List.of ne peut pas être modifiée après sa création
+             * (pas d'ajout, de suppression ou de modification d'éléments). Toute tentative de modification lève une
+             * UnsupportedOperationException.
+             * */
+            List<UserDto> users = List.of(user1, user2, user3);
+
+            model.addAttribute("users", users);
+            return "users";
         }
 }
