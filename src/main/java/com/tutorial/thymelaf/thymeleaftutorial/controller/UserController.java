@@ -53,4 +53,11 @@ public class UserController {
             model.addAttribute("id", "1");
             return "linkExpression";
         }
+
+        // handler method to handle fragment expressions request
+        // http:localhost:8080/fragmentExpression
+        @GetMapping("fragmentExpression")
+        public String fragmentExpression(){
+            return "fragmentExpression";
+        }
 }
