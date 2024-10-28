@@ -100,4 +100,12 @@ public class UserController {
             model.addAttribute("users", users);
             return "conditionalExpression";
         }
+
+    @GetMapping("switchExpression")
+    public String switchExpression(Model model) {
+        UserDto user = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
+
+        model.addAttribute("user", user);
+        return "switchExpression";
+    }
 }

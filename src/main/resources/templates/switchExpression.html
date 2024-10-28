@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Expression</title>
+</head>
+<body>
+    <h1>Switch Case Attributes Demo : </h1>
+    <h2 th:text="${user.name}"></h2>
+    <div th:switch="${user.role}">
+        <p th:case="'Admin'"> Admin User </p>
+        <p th:case="'User'"> Normal User </p>
+        <p th:case="*"> Unknown User </p>
+    </div>
+</body>
+</html>
