@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Variable Expression</title>
 </head>
 <body>
+    <h1> Variable Expression Demo : </h1>
+    <h2> User Details: </h2>
+    <div>
+        <p> Name: <strong th:text="${user.name}">User Name</strong> </p>
+        <p> Email: <strong th:text="${user.email}">User Email</strong> </p>
+        <p> Role: <strong th:text="${user.role}">User Role</strong> </p>
+        <p> Gender: <strong th:text="${user.gender}">User Gender</strong> </p>
+    </div>
 
 </body>
 </html>
