@@ -65,7 +65,7 @@ public class UserController {
 
         // handler method to handle iteration expressions request
         // http:localhost:8080/users
-        @GetMapping("users")
+        @GetMapping("iterationExpression")
         public String users(Model model) {
             UserDto user1 = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
             UserDto user2 = new UserDto("Jane Doe", "Jane.doe@example.com", "User", "Female");
@@ -79,6 +79,25 @@ public class UserController {
             List<UserDto> users = List.of(user1, user2, user3);
 
             model.addAttribute("users", users);
-            return "users";
+            return "iterationExpression";
+        }
+
+        // handler method to handle conditional expressions request
+        // http:localhost:8080/conditionalExpression
+        @GetMapping("conditionalExpression")
+        public String conditionalExpression(Model model) {
+            UserDto user1 = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
+            UserDto user2 = new UserDto("Jane Doe", "Jane.doe@example.com", "User", "Female");
+            UserDto user3 = new UserDto("Tom Smith", "tom.smith@example.com", "User", "Male");
+
+            /*
+             * Création d'une liste immutable : La liste créée par List.of ne peut pas être modifiée après sa création
+             * (pas d'ajout, de suppression ou de modification d'éléments). Toute tentative de modification lève une
+             * UnsupportedOperationException.
+             * */
+            List<UserDto> users = List.of(user1, user2, user3);
+
+            model.addAttribute("users", users);
+            return "conditionalExpression";
         }
 }

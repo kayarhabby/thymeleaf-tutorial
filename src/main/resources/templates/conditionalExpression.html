@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1> Conditional Expressions Demo : </h1>
-    <table >
+    <table border="1">
         <thead>
             <tr>
                 <th colspan="4">User Details</th>
@@ -26,7 +26,7 @@
                 <td>
                     <a th:href="@{/update}" th:if="${user.role == 'Admin'}">Edit</a>
                     <a th:href="@{/delete}" th:if="${user.role == 'Admin'}">Delete</a>
-                    <a th:href="@{/delete}" th:unless="${user.role == 'Admin'}">Vieww</a>
+                    <a th:href="@{/delete}" th:unless="${user.role == 'Admin'}">View</a>
                 </td>
             </tr>
         </tbody>
