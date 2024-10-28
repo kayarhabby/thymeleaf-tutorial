@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selection Expression</title>
+</head>
+<body>
+    <h1> Variable Expression Demo : </h1>
+    <h2> User Details: </h2>
+    <div th:object="${user}">
+
+      <p>
+        Name: <strong th:text="*{name}">User Name</strong>
+      </p>
+      <p>
+        Email: <strong th:text="*{email}">User Email</strong>
+      </p>
+      <p>
+        Role: <strong th:text="*{role}">User Role</strong>
+      </p>
+      <p>
+        Gender: <strong th:text="*{gender}">User Gender</strong>
+      </p>
+
+    </div>
+
+</body>
+</html>

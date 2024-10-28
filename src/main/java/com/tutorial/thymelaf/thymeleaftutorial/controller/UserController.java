@@ -20,7 +20,20 @@ public class UserController {
             UserDto user = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
             model.addAttribute("user", user);
 
+            // return the view
             return "variableExpression";
 
+        }
+
+        // handler method to handle selection expression
+        @GetMapping("/selectionExpression")
+        public String selectionExpression(Model model) {
+            // The @GetMapping annotation is used to map the HTTP GET requests.
+            // The @GetMapping annotation is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
+            UserDto user = new UserDto("John Doe", "john.doe@example.com", "Admin", "Male");
+            model.addAttribute("user", user);
+
+            // return the view
+            return "selectionExpression";
         }
 }
