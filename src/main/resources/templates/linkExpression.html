@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Link Expressions</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+<!--  <link rel="stylesheet" href="/css/style.css">-->
 </head>
 <body>
-
+<h1> Link Expression </h1>
+<a th:href="@{/variableExpression}"> variable-expression</a>
+<a th:href="@{/selectionExpression}"> selection-expression</a>
+<p><a th:href="@{linkExpression/{id}(id=${id})}">link with parameter</a></p>
 </body>
 </html>
