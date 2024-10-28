@@ -26,6 +26,7 @@ public class UserController {
         }
 
         // handler method to handle selection expression
+        // http:localhost:8080/selectionExpression
         @GetMapping("/selectionExpression")
         public String selectionExpression(Model model) {
             // The @GetMapping annotation is used to map the HTTP GET requests.
