@@ -13,6 +13,7 @@ public class UserController {
         // The @Controller annotation is a specialization of the @Component annotation.
 
         // handleRequest() method is used to handle the requests and responses.
+        // http:localhost:8080/variableExpression
         @GetMapping("/variableExpression")
         public String variableExpression(Model model) {
             // The @GetMapping annotation is used to map the HTTP GET requests.
@@ -36,5 +37,12 @@ public class UserController {
 
             // return the view
             return "selectionExpression";
+        }
+
+        // handler method to handle message expressions request
+        // http:localhost:8080/messageExpression
+        @GetMapping("messageExpression")
+        public String messageExpression(){
+            return "messageExpression";
         }
 }
